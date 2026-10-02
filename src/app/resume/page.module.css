@@ -1,7 +1,16 @@
 .container {
-  max-width: 900px;
+  max-width: 960px;
   margin: 2rem auto;
   padding: 0 1.5rem;
+}
+
+.pageTitle {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.downloadTitle {
+  margin-bottom: 2rem;
 }
 
 .downloadTitle a {
@@ -11,6 +20,7 @@
 .section {
   border-bottom: 1px solid var(--dark-navy);
   padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .sectionTitle {
@@ -24,8 +34,24 @@
   font-size: 1.2rem;
 }
 
+.entry + .entry {
+  margin-top: 1.25rem;
+}
+
 .entryInfo,
 .entryDescription,
 .skillList {
   color: var(--grey);
+  line-height: 1.6;
+}
+
+.entryDescription ul,
+.skillList {
+  margin: 0.75rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.entryDescription li,
+.skillList li {
+  margin-bottom: 0.4rem;
 }
