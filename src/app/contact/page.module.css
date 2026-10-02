@@ -1,0 +1,48 @@
+.page {
+  flex: 1;
+  width: 100%;
+}
+
+.container {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 1rem 1.5rem;
+}
+
+.pageTitle {
+  font-size: 2rem;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.form {
+  background-color: var(--dark-navy);
+  border: 1px solid var(--grey);
+  padding: 1.25rem;
+  border-radius: 6px;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.label {
+  color: var(--white);
+  font-weight: 600;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  background-color: var(--black);
+  border: 1px solid var(--grey);
+  padding: 0.6rem;
+  border-radius: 6px;
+  color: var(--white);
+}
+
+.submit {
+  background-color: var(--teal);
+  color: var(--white);
+  padding: 0.65rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+}

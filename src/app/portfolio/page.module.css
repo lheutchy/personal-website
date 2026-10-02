@@ -1,0 +1,17 @@
+.projectSection {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem 1.25rem;
+  border-bottom: 1px solid var(--dark-navy);
+}
+
+.commentsSection {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--grey);
+}
+
+.commentsSection h2 {
+  color: var(--white);
+  margin-bottom: 0.75rem;
+}

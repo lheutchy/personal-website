@@ -1,0 +1,32 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--dark-navy);
+}
+
+.imageWrapper {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.date {
+  font-size: 0.9rem;
+  color: var(--grey);
+}
+
+.description {
+  color: var(--grey);
+}
+
+.link {
+  color: var(--teal);
+}

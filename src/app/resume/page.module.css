@@ -1,0 +1,31 @@
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.downloadTitle a {
+  color: var(--teal);
+}
+
+.section {
+  border-bottom: 1px solid var(--dark-navy);
+  padding-bottom: 1.5rem;
+}
+
+.sectionTitle {
+  color: var(--white);
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.entryTitle {
+  color: var(--white);
+  font-size: 1.2rem;
+}
+
+.entryInfo,
+.entryDescription,
+.skillList {
+  color: var(--grey);
+}
