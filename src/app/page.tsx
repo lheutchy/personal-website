@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import style from "./page.module.css";
 
 export default function Home() {
@@ -7,10 +8,13 @@ export default function Home() {
       <main>
         <section className={style.about}>
           <h1 className={style.aboutTitle}>Hello World! This is my personal website.</h1>
-          <div className={style.aboutimg}>
-            <img
+          <div className={`${style.aboutimg} media-frame`}>
+            <Image
               src="/images/photoOfSelf3.jpg"
               alt="Photo of myself"
+              fill
+              priority
+              sizes="(max-width: 768px) calc(100vw - 4rem), 540px"
             />
           </div>
           <div className={style.aboutText}>

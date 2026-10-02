@@ -1,4 +1,4 @@
-import style from "/page.module.css";
+import style from "./page.module.css";
 import BlogPreview from "@/components/blogPreview";
 import connectDB from "@/database/db";
 import Blog from "@/database/blogSchema";
@@ -6,7 +6,7 @@ import Blog from "@/database/blogSchema";
 export default async function Blogs() {
   const blogs = await getBlogs();
   return (
-    <main>
+    <main className={style.container}>
       {blogs &&
         blogs.map((blog) => (
           <BlogPreview

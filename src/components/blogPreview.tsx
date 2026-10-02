@@ -10,13 +10,12 @@ export default function BlogPreview(props: Blog) {
 
   return (
     <div className={style.card}>
-      <div className={style.imageWrapper}>
+      <div className={`${style.imageWrapper} media-frame`}>
         <Image 
           src={src}
-          alt="img"
-          width={99999}
-          height={99999}
-          style={{ width: "100%", height: "auto", maxWidth: "500px" }}
+          alt={props.imageAlt}
+          fill
+          sizes="(max-width: 850px) calc(100vw - 3rem), 800px"
         />
       </div>
 

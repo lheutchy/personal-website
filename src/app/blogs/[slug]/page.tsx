@@ -4,8 +4,9 @@ import blogSchema from '@/database/blogSchema'
 import Blog from '@/database/blogSchema'
 import Comment from '@/components/comment'
 import { IComment } from '@/components/comment'
+import style from './page.module.css'
 
-type Props = { params: { slug: string } }
+type Props = { params: Promise<{ slug: string }> }
 
 async function getBlog(slug: string) {
 	try {
@@ -29,7 +30,7 @@ async function getBlog(slug: string) {
 }
 
 export default async function BlogPage({ params }: Props) {
-  const { slug } = params
+  const { slug } = await params
 
   await connectDB()
   const blog = (await blogSchema.findOne({ slug }).lean()) as Blog | null
@@ -43,17 +44,22 @@ export default async function BlogPage({ params }: Props) {
   const imageSrc = blog.image && blog.image.startsWith('/') ? blog.image : `/images/${blog?.image ?? 'default.jpg'}`
 
   return (
-    <main>
-      <h1>{blog?.title}</h1>
-      <p>{String(blog?.date)}</p>
+    <main className={style.blogContainer}>
+      <h1 className={style.title}>{blog?.title}</h1>
+      <p className={style.date}>{String(blog?.date)}</p>
 
       {imageSrc && (
-        <div>
-          <Image src={imageSrc} alt={blog?.title ?? 'blog image'} width={1000} height={500} />
+        <div className={`${style.imageWrapper} media-frame`}>
+          <Image
+            src={imageSrc}
+            alt={blog?.imageAlt || blog?.title || 'Blog image'}
+            fill
+            sizes="(max-width: 960px) calc(100vw - 3rem), 900px"
+          />
         </div>
       )}
 
-      <div>
+      <div className={style.description}>
         {blog?.description ? (
           <div dangerouslySetInnerHTML={{ __html: blog.description }} />
         ) : (
@@ -61,7 +67,7 @@ export default async function BlogPage({ params }: Props) {
         )}
       </div>
 
-      <section>
+      <section className={style.commentsSection}>
         <h2>Comments</h2>
         {blog.comments && blog.comments.length > 0 ? (
           blog.comments.map((comment: IComment, index: number) => (

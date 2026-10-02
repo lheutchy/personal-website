@@ -28,19 +28,7 @@
 .aboutimg {
   width: 100%;
   max-width: 540px;
-  border-radius: 6px;
-  overflow: hidden;
   flex: 0 0 540px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.aboutimg img {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
 }
 
 .aboutText {
@@ -54,4 +42,10 @@
   color: var(--grey);
   margin: 0;
   box-sizing: border-box;
+}
+
+@media (max-width: 640px) {
+  .aboutimg {
+    flex-basis: 100%;
+  }
 }

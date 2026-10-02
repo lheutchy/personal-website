@@ -11,14 +11,12 @@ export default function ProjectPreview(props: Project) {
     <div className={style.card}>
       <h3 className={style.title}>{props.title}</h3>
 
-      <div className={style.imageWrapper}>
+      <div className={`${style.imageWrapper} media-frame`}>
         <Image 
           src={src}
-          alt="props.title"
-          width={1200}
-          height={800}
-          sizes="100vw"
-          className={style.image}
+          alt={props.image_alt || props.title}
+          fill
+          sizes="(max-width: 900px) calc(100vw - 4rem), 850px"
         />
 	    </div>
 

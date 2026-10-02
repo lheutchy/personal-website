@@ -27,9 +27,6 @@ const connectDB = async () => {
 
   const rawUrl = process.env.MONGO_URI;
 
-  // 🔍 These logs should show up in the TERMINAL
-  console.log("MONGO_URI raw:", JSON.stringify(rawUrl));
-
   if (!rawUrl) {
     throw new Error("MONGO_URI is not defined in environment variables");
   }
@@ -40,8 +37,6 @@ const connectDB = async () => {
     .replace(/^MONGO_URI=/, "")      // strip "MONGO_URI=" if it got copied
     .replace(/^"(.+)"$/, "$1")       // strip double quotes around whole value
     .replace(/^'(.+)'$/, "$1");      // strip single quotes
-
-  console.log("MONGO_URI cleaned:", JSON.stringify(url));
 
   connection = await mongoose.connect(url);
   return connection;
