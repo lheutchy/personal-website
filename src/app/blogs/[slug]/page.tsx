@@ -54,7 +54,7 @@ export default async function BlogPage({ params }: Props) {
             src={imageSrc}
             alt={blog?.imageAlt || blog?.title || 'Blog image'}
             fill
-            sizes="(max-width: 960px) calc(100vw - 3rem), 900px"
+            sizes="(max-width: 960px) calc((100vw - 3rem) * 0.6), 540px"
           />
         </div>
       )}

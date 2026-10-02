@@ -37,7 +37,7 @@ main {
   margin: 0 auto;
 }
 
-/* Shared frame keeps every page image the same shape and crop behavior. */
+/* Shared frame keeps every page image proportional without cropping. */
 .media-frame {
   position: relative;
   aspect-ratio: 3 / 2;
@@ -46,7 +46,7 @@ main {
 }
 
 .media-frame > img {
-  object-fit: cover;
+  object-fit: contain;
 }
 
 h1, h2, h3 {

@@ -16,7 +16,7 @@ export default function ProjectPreview(props: Project) {
           src={src}
           alt={props.image_alt || props.title}
           fill
-          sizes="(max-width: 900px) calc(100vw - 4rem), 850px"
+          sizes="(max-width: 900px) calc((100vw - 2.5rem) * 0.6), 510px"
         />
 	    </div>
 

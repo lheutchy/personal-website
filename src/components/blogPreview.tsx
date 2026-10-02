@@ -15,7 +15,7 @@ export default function BlogPreview(props: Blog) {
           src={src}
           alt={props.imageAlt}
           fill
-          sizes="(max-width: 850px) calc(100vw - 3rem), 800px"
+          sizes="(max-width: 850px) calc((100vw - 3rem) * 0.6), 480px"
         />
       </div>
 

@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className = {style.footer}>
       <div className={style.inner}>
-        © 2025 Lorinc's Website | All Rights Reserved
+        © 2026 Lorinc's Website | All Rights Reserved
       </div>
     </footer>
   );
